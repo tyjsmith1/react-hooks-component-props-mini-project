@@ -1,11 +1,11 @@
-import React from "react";
+import React from "react"
 
 function About ({image, about}) {
-    const imageUrl = image ? image : 'https://via.placeholder.com/215'
+    const fallbackImage = image || "https://via.placeholder.com/215"
 
     return (
         <aside>
-            <img src={imageUrl} alt="blog logo"></img>
+            <img  src={fallbackImage} alt="blog logo"/>
             <p>{about}</p>
         </aside>
     )
